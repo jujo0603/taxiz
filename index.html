@@ -59,6 +59,26 @@ var ntaWA = {"ga":"","ajaxurl":"#","nonce":""};
 
   gtag('config', 'AW-953244580');
 </script>
+	<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    console.log("DOM is ready for action");
+    document.addEventListener('click', function(e){
+      for(i=0;i<e.path.length;i++){
+        if(e.path[i].host || e.path[i].href) {
+          if(e.path[i].host.includes("whatsapp.com")) {
+            console.log('WhatsApp has been clicked');
+              gtag('event', 'conversion', {'send_to': 'AW-953244580/S3kECLfxsqIDEKS3xcYD'});
+          }
+          if(e.path[i].href.includes("tel:")) {
+            console.log('Telephone has been clicked');
+              gtag('event', 'conversion', {'send_to': 'AW-953244580/PjP3CJ7Es6IDEKS3xcYD'});
+          }
+        }
+      }
+    });
+  });
+</script>
+ref:_00D361GSOX._5003x2EDYTs:ref
 </head>
 <body>
 
